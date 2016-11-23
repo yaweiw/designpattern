@@ -1,0 +1,7 @@
+// the configured options and settings for Tutorial
+
+  #define DESIGN_PATTERN_CPP_MAJOR @DESIGN_PATTERN_CPP_MAJOR@
+
+  #define DESIGN_PATTERN_CPP_MINOR @DESIGN_PATTERN_CPP_MINOR@
+
+  #cmakedefine USE_DP_CLASSES
