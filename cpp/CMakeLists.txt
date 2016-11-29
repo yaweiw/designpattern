@@ -48,7 +48,7 @@ if (USE_DP_CLASSES)
    add_subdirectory (${PROJECT_SOURCE_DIR}/src/)
    #add_subdirectory (${PROJECT_SOURCE_DIR}/src/tests)
    #add_subdirectory (${PROJECT_SOURCE_DIR}/src/patterns)
-   set (EXTRA_LIBS ${EXTRA_LIBS} testlib)
+   #set (EXTRA_LIBS ${EXTRA_LIBS} testlib)
 endif (USE_DP_CLASSES)
 
 install (FILES "${PROJECT_BINARY_DIR}/inc/DesignPatternCPPConfig.h"
@@ -72,3 +72,7 @@ do_test (testlib_ut 1 2 + "is 3")
 do_test (testlib_ut 2 3.5 * "is 7")
 do_test (testlib_ut 4.2 2.1 - "is 2.1")
 do_test (testlib_ut 4.2 2 / "is 2.1")
+
+do_test (builder_ut 1 1 _ "Pizza with pan baked dough, hot sauce and pepperoni")
+
+do_test (factory_ut 1 1 _ "laptop")

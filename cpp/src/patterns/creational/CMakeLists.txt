@@ -1,4 +1,7 @@
-add_library(cretional creational.cpp)
+#Copyright (c) Microsoft. All rights reserved.
+#Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-install (TARGETS creational DESTINATION ${PROJECT_BINARY_DIR}/lib)
-install (FILES creational.h DESTINATION ${PROJECT_BINARY_DIR}/inc)
+cmake_minimum_required(VERSION 2.8.11)
+
+add_subdirectory(builder)
+add_subdirectory(factory)
