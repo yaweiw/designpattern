@@ -76,3 +76,29 @@ do_test (testlib_ut 4.2 2 / "is 2.1")
 do_test (builder_ut 1 1 _ "Pizza with pan baked dough, hot sauce and pepperoni")
 
 do_test (factory_ut 1 1 _ "laptop")
+
+
+# regular expression
+set(contents "Hello\nWorld!")
+message("contents='${contents}'")
+
+string(REGEX MATCHALL "Hello[\\r\\n\\t ]*World!" matches ${contents})
+message("Matches1:")
+foreach(match ${matches})
+  message("match='${match}'")
+endforeach()
+
+string(REGEX MATCHALL "Hello[\r\n\t ]*World!" matches ${contents})
+message("Matches2:")
+foreach(match ${matches})
+  message("match='${match}'")
+endforeach()
+
+set(contents2 "Info: IoT Hub SDK for C, version 1.1.2\nfromConnectionString SUCCEEDED!")
+message("contents2='${contents2}'")
+
+string(REGEX MATCHALL "Info.*[\r\n\t ]*from.*SUCCEEDED" matches ${contents2})
+message("Matches22:")
+foreach(match ${matches})
+  message("match22='${match}'")
+endforeach()

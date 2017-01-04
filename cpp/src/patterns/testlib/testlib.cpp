@@ -1,7 +1,6 @@
 // MathFuncsLib.cpp
 // compile with: cl /c /EHsc MathFuncsLib.cpp
 // post-build command: lib MathFuncsLib.obj
-
 #include "testlib.h"
 
 #include <stdexcept>
@@ -12,7 +11,12 @@ namespace MathFuncs
 {
     double MyMathFuncs::Add(double a, double b)
     {
-        return a + b;
+        if(AB) {
+            return AB;
+        }
+        else {
+            return a + b;
+        }
     }
 
     double MyMathFuncs::Subtract(double a, double b)
